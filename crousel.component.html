@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <!-- <swiper class="swiper" [config]="config"> -->
+       <swiper class="swiper" [config]="config">
+      <div class="swiper-wrapper">
+          <img class="swiper-slide" *ngFor="let image of images" [src]="image">
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </swiper>
+  </mat-card-content>
+  <mat-card-actions>
+    <button md-raised-button color="primary" (click)="loadImages()">load images</button>
+  </mat-card-actions>
+</mat-card>
